@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        #protected-content {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="password" placeholder="Digite a senha" />
+        <button onclick="checkPassword()">Entrar</button>
+
+        <div id="protected-content">
+            <ul>
+                <li>Ganhou</li>
+                <li>Verificar</li>
+                <li>Contato</li>
+                <li>Data</li>
+                <li>Habilitar</li>
+                <li>Tornar</li>
+                <li>Bola</li>
+                <li>Ovo</li>
+                <li>Usar</li>
+                <li>Digitar</li>
+                <li>Display</li>
+                <li>Cálculos</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const correctPassword = 'O Pequeno Príncipe';
+
+            if (inputPassword === correctPassword) {
+                document.getElementById('protected-content').style.display = 'block';
+                document.querySelector('input').style.display = 'none';
+                document.querySelector('button').style.display = 'none';
+            } else {
+                alert('Senha incorreta!');
+            }
+        }
+    </script>
+</body>
+</html>

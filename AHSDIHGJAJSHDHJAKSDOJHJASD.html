@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?</title> <!-- Nome da página alterado para "?" -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        #protected-content {
+            display: none;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="password" id="password" placeholder="Digite a senha" />
+        <button onclick="checkPassword()">Entrar</button>
+
+        <div id="protected-content">
+            <a href="file:///C:/Users/vinii/Downloads/HJAOSJDJWJAOSDHAADSGASDJAQ.html" target="_blank">Acesse o próximo enigma</a>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const correctPassword = 'EDMN017';
+
+            if (inputPassword === correctPassword) {
+                document.getElementById('protected-content').style.display = 'block';
+                document.querySelector('input').style.display = 'none';
+                document.querySelector('button').style.display = 'none';
+            } else {
+                alert('Errou');
+            }
+        }
+    </script>
+</body>
+</html>

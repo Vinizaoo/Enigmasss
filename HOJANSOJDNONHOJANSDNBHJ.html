@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversáriante!!</title> <!-- Título alterado para "Aniversáriante!!" -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        #protected-content {
+            display: none;
+        }
+        ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        .video-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="password" id="password" placeholder="Digite a senha" />
+        <button onclick="checkPassword()">Entrar</button>
+        <p class="contact-info">Envie-me tais palavras no meu contato</p>
+
+        <div id="protected-content">
+            <ul>
+                <li>Jogo</li>
+                <li>Braço</li>
+                <li>Lodo</li>
+                <li>Bolo</li>
+                <li>Banana</li>
+                <li>Abacate</li>
+                <li>Bola</li>
+                <li>Parede</li>
+                <li>Cisne</li>
+                <li>Rato</li>
+                <li>Peso</li>
+                <li>Aplicativo</li>
+            </ul>
+            <div class="video-link">
+                <a href="https://www.youtube.com/watch?v=EASzLB3RNPA" target="_blank">Assista ao vídeo</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const correctPassword = '0917';
+
+            if (inputPassword === correctPassword) {
+                document.getElementById('protected-content').style.display = 'block';
+                document.querySelector('input').style.display = 'none';
+                document.querySelector('button').style.display = 'none';
+                document.querySelector('.contact-info').style.display = 'none';
+            } else {
+                alert('Senha incorreta!');
+            }
+        }
+    </script>
+</body>
+</html>
